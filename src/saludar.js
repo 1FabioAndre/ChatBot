@@ -1,7 +1,9 @@
+import esmayor from "./esmayor";
+
 function saludar(nombre, edad){
     mensaje = "Hola";
-    if(edad > 30){
-        return mensaje + " Señor " + nombre;
+    if(esmayor(edad) == true){
+        return mensaje + " Sr " + nombre;
     }
     else{
         return mensaje + " " + nombre;
