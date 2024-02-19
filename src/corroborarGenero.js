@@ -1,11 +1,21 @@
 
-function corroborarGenero(genero){
-    if(genero == "M"){
-        return " Sr. "
+function corroborarGenero(genero, idioma){
+    if(idioma == "Esp"){
+        if(genero == "M"){
+            return " Sr. "
+        }
+        else{
+            return " Sra. "
+        }
+    } else {
+        if(genero == "M"){
+            return " Mr. "
+        }
+        else{
+            return " Miss "
+        }
     }
-    else{
-        return " Sra. "
-    }
+    
 }
 
 export default corroborarGenero;

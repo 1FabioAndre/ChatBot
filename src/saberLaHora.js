@@ -1,4 +1,4 @@
-function saberLaHora(){
+function saberLaHora(idioma){
     // Crear un objeto de fecha
     var fechaActual = new Date();
 
@@ -6,13 +6,28 @@ function saberLaHora(){
     var horas = fechaActual.getHours();
 
     if(horas >= "00" && horas < "12"){
-        return "Buenos dias ";
+        if(idioma == "Esp"){
+            return "Buenos dias ";
+        } 
+        else{
+            return "Good morning ";
+        }
     }
     else if(horas >= 12 && horas < "18"){
-        return "Buenas tardes ";
+        if(idioma == "Esp"){
+            return "Buenas tardes ";
+        } 
+        else{
+            return "Good afternoon ";
+        }
     }
     else{
-        return "Buenas noches ";
+        if(idioma == "Esp"){
+            return "Buenas noches ";
+        } 
+        else{
+            return "Good night ";
+        }
     }
 }
 
